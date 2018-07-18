@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/resultat_item"
+        android:icon="@drawable/football"
+
+        android:title="Résultats" />
+    <item
+        android:id="@+id/actualite_item"
+        android:icon="@drawable/ballon"
+
+        android:title="Actualités" />
+    <item
+        android:id="@+id/composition_item"
+        android:icon="@drawable/soccergoal"
+
+        android:title="Composition" />
+    <item
+        android:id="@+id/classement_item"
+        android:icon="@drawable/trophy"
+
+        android:title="Classement" />
+
+</menu>

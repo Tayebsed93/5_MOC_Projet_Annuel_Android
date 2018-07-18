@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id ="@+id/classement_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+
+    <TextView
+        android:id="@+id/classement_position"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="pos"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/classement_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:paddingLeft="5dp"
+        />
+
+
+    <TextView
+        android:id="@+id/classement_nomClub"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="nomClub"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/classement_points"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="nbpoints"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/classement_matchs_joue"
+        android:layout_width="33dp"
+        android:layout_height="wrap_content"
+        android:text="nbdematchs"/>
+
+    <TextView
+        android:id="@+id/classement_victoire"
+        android:layout_width="31dp"
+        android:layout_height="wrap_content"
+        android:text="victoire"/>
+
+    <TextView
+        android:id="@+id/classement_nul"
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        android:text="nul" />
+
+
+    <TextView
+        android:id="@+id/classement_defaite"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:text="defaite"/>
+
+    <TextView
+        android:id="@+id/classement_difference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="diffbuts"/>
+
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.esgi.iaitmansour.myfoot.MembreActualityActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_actuality_membre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#599C78"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" >
+
+            <TextView
+                android:id="@+id/toolbar_membre_actuality_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="ACTUALITES"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <!-- recycler view to show search query timeline -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/news_membre_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@id/android:empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Pas de news disponibles pour votre club" />
+
+        <!-- empty label to show when no tweets available -->
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

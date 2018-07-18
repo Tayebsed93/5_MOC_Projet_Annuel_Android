@@ -1,0 +1,121 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.esgi.iaitmansour.myfoot.ResultatCFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="POS"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nomClub"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PTS"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/jouer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="J"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/victoiretextView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="V"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="N"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/defaite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="D"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/diffbuts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="+/-"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/classement_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@android:id/empty"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="L'affichage du classement n'est pas disponible pour votre club"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
