@@ -4,7 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.esgi.iaitmansour.myfoot.MembreActualityActivity">
+    tools:context="com.esgi.iaitmansour.myfoot.Activitys.MembreActualityActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,13 +18,14 @@
 
         android:orientation="vertical">
 
+        <!-- recycler view to show search query timeline -->
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar_actuality_membre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#599C78"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme" >
+            android:theme="?attr/actionBarTheme">
 
             <TextView
                 android:id="@+id/toolbar_membre_actuality_title"
@@ -32,21 +39,37 @@
 
         </android.support.v7.widget.Toolbar>
 
-        <!-- recycler view to show search query timeline -->
         <android.support.v7.widget.RecyclerView
             android:id="@+id/news_membre_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@id/android:empty"
+        <LinearLayout
+            android:id="@android:id/empty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal|center_vertical"
-            android:text="Pas de news disponibles pour votre club" />
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Aucune actualité n'est disponible pour votre club"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </LinearLayout>
 
         <!-- empty label to show when no tweets available -->
 
     </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </android.support.constraint.ConstraintLayout>

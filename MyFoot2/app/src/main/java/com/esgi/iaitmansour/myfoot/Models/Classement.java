@@ -6,7 +6,7 @@ package com.esgi.iaitmansour.myfoot.Models;
 
 public class Classement {
 
-    public String overall_league_position;
+    public Integer overall_league_position;
     public String team_name;
     public String overall_league_PTS;
     public String overall_league_payed;
@@ -20,7 +20,7 @@ public class Classement {
 
     }
 
-    public Classement(String overall_league_position, String team_name, String overall_league_PTS, String overall_league_payed, String overall_league_W, String overall_league_D, String overall_league_L, String overall_league_GF, String overall_league_GA) {
+    public Classement(Integer overall_league_position, String team_name, String overall_league_PTS, String overall_league_payed, String overall_league_W, String overall_league_D, String overall_league_L, String overall_league_GF, String overall_league_GA) {
         this.overall_league_position = overall_league_position;
         this.team_name = team_name;
         this.overall_league_PTS = overall_league_PTS;
@@ -32,11 +32,11 @@ public class Classement {
         this.overall_league_GA = overall_league_GA;
     }
 
-    public String getOverall_league_position() {
+    public Integer getOverall_league_position() {
         return overall_league_position;
     }
 
-    public void setOverall_league_position(String overall_league_position) {
+    public void setOverall_league_position(Integer overall_league_position) {
         this.overall_league_position = overall_league_position;
     }
 

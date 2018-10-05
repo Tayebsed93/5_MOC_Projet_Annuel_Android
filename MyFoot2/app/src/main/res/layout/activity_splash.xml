@@ -4,7 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondecran"
-    tools:context="com.esgi.iaitmansour.myfoot.SplashActivity">
+    android:background="#599C78"
+    tools:context="com.esgi.iaitmansour.myfoot.Activitys.SplashActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/SplashText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="cursive"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="MyFoot"
+            android:textColor="@android:color/white"
+            android:textSize="80sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

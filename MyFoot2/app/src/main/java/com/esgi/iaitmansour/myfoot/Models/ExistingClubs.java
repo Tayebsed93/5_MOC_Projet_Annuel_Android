@@ -9,11 +9,22 @@ public class ExistingClubs {
     private int userId;
     private String nom;
     private String logoUrl;
+    private String twitter;
 
-    public ExistingClubs(int userId, String nom, String logoUrl) {
+    public ExistingClubs(int userId, String nom, String logoUrl, String twitter) {
         this.userId = userId;
         this.nom = nom;
         this.logoUrl = logoUrl;
+        this.twitter = twitter;
+    }
+
+
+    public String getTwitter() {
+        return twitter;
+    }
+
+    public void setTwitter(String twitter) {
+        this.twitter = twitter;
     }
 
     public int getUserId() {

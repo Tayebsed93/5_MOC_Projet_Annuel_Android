@@ -2,7 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.esgi.iaitmansour.myfoot.ScoreGameFragment">
+    tools:context="com.esgi.iaitmansour.myfoot.Fragments.ScoreGameFragment">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_container_score"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,12 +19,13 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:background="#599C78"
-            android:text="Score "
+            android:gravity="center_vertical|center_horizontal"
+            android:text="SCORE"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <android.support.v7.widget.RecyclerView
@@ -29,5 +36,6 @@
 
         </android.support.v7.widget.RecyclerView>
     </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </FrameLayout>

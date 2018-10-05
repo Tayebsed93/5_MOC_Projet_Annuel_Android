@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.esgi.iaitmansour.myfoot.ResultatRFragment">
+    tools:context="com.esgi.iaitmansour.myfoot.Fragments.ResultatRFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,22 +10,23 @@
         android:background="#ffffff"
         android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/resultat_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="60dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/resultat_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="60dp">
 
-    </android.support.v7.widget.RecyclerView>
+        </android.support.v7.widget.RecyclerView>
 
         <LinearLayout
-            android:layout_width="match_parent"
             android:id="@android:id/empty"
-            android:gravity="center_horizontal|center_vertical"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="X"
@@ -34,9 +35,10 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="250dp"
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="L'affichage des résultats n'est pas disponible pour votre club"
+                android:text="L'affichage des résultats  n'est pas disponible pour votre club"
                 android:textAlignment="center"
                 android:textSize="18sp" />
         </LinearLayout>

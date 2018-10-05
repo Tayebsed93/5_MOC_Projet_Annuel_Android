@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.esgi.iaitmansour.myfoot.NewsFragment;
-import com.esgi.iaitmansour.myfoot.TwitterFragment;
+import com.esgi.iaitmansour.myfoot.Fragments.NewsFragment;
+import com.esgi.iaitmansour.myfoot.Fragments.TwitterFragment;
 
 /**
  * Created by iaitmansour on 08/07/2018.
@@ -26,11 +26,11 @@ public class PagerActualityAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                TwitterFragment tabTwitter = new TwitterFragment();
-                return tabTwitter;
-            case 1:
                 NewsFragment tabNews = new NewsFragment();
                 return tabNews;
+            case 1:
+                TwitterFragment tabTwitter = new TwitterFragment();
+                return tabTwitter;
             default:
                 return null;
         }

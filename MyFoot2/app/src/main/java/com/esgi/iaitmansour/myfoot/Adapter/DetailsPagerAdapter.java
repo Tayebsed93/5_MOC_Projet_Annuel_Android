@@ -5,8 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.esgi.iaitmansour.myfoot.DetailsMatchCompoFragment;
-import com.esgi.iaitmansour.myfoot.DetailsMatchScorerFragment;
+import com.esgi.iaitmansour.myfoot.Fragments.DetailsMatchCompoFragment;
+import com.esgi.iaitmansour.myfoot.Fragments.DetailsMatchScorerFragment;
 
 /**
  * Created by iaitmansour on 04/07/2018.

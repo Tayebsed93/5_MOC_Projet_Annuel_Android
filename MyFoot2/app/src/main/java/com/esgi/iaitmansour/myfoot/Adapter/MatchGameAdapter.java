@@ -1,8 +1,9 @@
 package com.esgi.iaitmansour.myfoot.Adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,16 +11,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.esgi.iaitmansour.myfoot.Models.MatchGame;
 import com.esgi.iaitmansour.myfoot.R;
-import com.esgi.iaitmansour.myfoot.TerrainActivity;
+import com.esgi.iaitmansour.myfoot.Activitys.TerrainActivity;
+import com.esgi.iaitmansour.myfoot.Activitys.TerrainDeuxActivity;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
 
@@ -94,13 +96,9 @@ public class MatchGameAdapter extends RecyclerView.Adapter<MatchGameAdapter.Matc
                 @Override
                 public void onClick(View view) {
 
-                    Intent intent = new Intent (mContext , TerrainActivity.class);
-                    intent.putExtra ("pays",matchHome);
-                    intent.putExtra ("competition_id", id);
-                    mContext.startActivity (intent);
 
-                    Toast.makeText(mContext, "match de  "+ matchHome,
-                            Toast.LENGTH_SHORT).show();
+                    alertdialog (matchHome,id);
+
 
                 }
             });
@@ -115,6 +113,56 @@ public class MatchGameAdapter extends RecyclerView.Adapter<MatchGameAdapter.Matc
 
 
 
+    public void alertdialog(final String matchHome, final int id){
+        // Build an AlertDialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+
+        // Set a title for alert dialog
+        builder.setTitle("Selectionnez une composition");
+        //builder.setMessage("Selectionner votre rôle");
+
+        // Initializing an array of colors
+        final String[] colors = new String[]{
+                "4-4-2",
+                "4-3-3",
+                "Annuler"
+        };
+
+        // Set the list of items for alert dialog
+        builder.setItems(colors, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String selectedColor = Arrays.asList(colors).get(which);
+
+                if(selectedColor == "4-4-2"){
+
+                    Intent intent = new Intent (mContext , TerrainActivity.class);
+                    intent.putExtra ("pays",matchHome);
+                    intent.putExtra ("competition_id", id);
+                    intent.putExtra ("compo","442");
+                    mContext.startActivity (intent);
+
+                }
+
+                if(selectedColor == "4-3-3"){
+
+
+
+                    Intent intent = new Intent (mContext , TerrainDeuxActivity.class);
+                    intent.putExtra ("pays",matchHome);
+                    intent.putExtra ("competition_id", id);
+                    intent.putExtra ("compo","433");
+                    mContext.startActivity (intent);
+
+                }
+
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        // Display the alert dialog on interface
+        dialog.show();
+    }
 
 
 

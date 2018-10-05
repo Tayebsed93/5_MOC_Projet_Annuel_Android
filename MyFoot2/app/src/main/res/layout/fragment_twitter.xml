@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.esgi.iaitmansour.myfoot.ActualityFragment">
+    tools:context="com.esgi.iaitmansour.myfoot.Fragments.ActualityFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,18 +11,38 @@
         android:orientation="vertical">
 
         <!-- recycler view to show search query timeline -->
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/search_timeline_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content" >
 
-        <!-- empty label to show when no tweets available -->
-        <TextView
-            android:id="@+id/twitterMsg"
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@android:id/empty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal|center_vertical"
-            android:text="Pas de tweets disponibles" />
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Aucun tweet n'est disponible pour votre club"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- empty label to show when no tweets available -->
 
 
     </LinearLayout>

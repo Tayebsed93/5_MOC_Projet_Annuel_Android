@@ -1,6 +1,6 @@
 package com.esgi.iaitmansour.myfoot.Utils;
 
-import com.esgi.iaitmansour.myfoot.AddClubActivity;
+import com.esgi.iaitmansour.myfoot.Activitys.AddClubActivity;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -20,6 +20,7 @@ public interface CreateClubDataService {
     Call<AddClubActivity.ResponseUpload>uploadPhoto(
             @Part("nom")RequestBody nom,
             @Part("name")RequestBody name,
+            @Part("screen_name")RequestBody twitter,
             @Part("email")RequestBody email,
             @Part("password")RequestBody password,
             @Part("role")RequestBody role,

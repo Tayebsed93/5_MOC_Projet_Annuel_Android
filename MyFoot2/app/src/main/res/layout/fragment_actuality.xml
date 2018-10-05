@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.esgi.iaitmansour.myfoot.ResultatFragment">
+    tools:context="com.esgi.iaitmansour.myfoot.Fragments.ResultatFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_height="50dp"
             android:background="#599C78"
             android:gravity="center_vertical|center_horizontal"
-            android:text="ACTUALITES"
+            android:text="ACTUALITÉS"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="20sp"

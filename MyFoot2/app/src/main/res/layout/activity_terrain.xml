@@ -1,28 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:context="com.esgi.iaitmansour.myfoot.TerrainActivity"
-        android:background="@drawable/terrain"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.esgi.iaitmansour.myfoot.Activitys.TerrainActivity">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="50dp"
+        android:background="#599C78"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/roundcornerexit"
+            android:drawableTop="@drawable/exit"
+            android:paddingTop="10dp"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Composition" />
 
 
-    <Button
-        android:id="@+id/btnValider"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_gravity="right"
-        android:background="@drawable/roundcorner"
-        android:drawableTop="@drawable/done"
-        android:paddingTop="10dp"
-        android:textColor="#fff" />
+        <Button
+            android:id="@+id/btnValider"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/roundcorner"
+            android:drawableTop="@drawable/done"
+            android:paddingTop="10dp"
+            android:textColor="#fff" />
+
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/terrain">
 
         <Button
             android:id="@+id/player12"
@@ -30,24 +61,26 @@
             android:layout_height="70dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="40dp"
-             />
+            android:layout_marginBottom="10dp" />
 
         <Button
             android:id="@+id/player2"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_above="@+id/player12"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="89dp" />
+            android:layout_alignBottom="@+id/player12"
+            android:layout_alignParentEnd="false"
+            android:layout_alignStart="@+id/player8"
+            android:layout_marginBottom="62dp"
+            android:layout_marginStart="16dp" />
 
         <Button
             android:id="@+id/player3"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_above="@+id/player12"
-            android:layout_alignStart="@+id/player10"
-            android:layout_marginStart="24dp" />
+            android:layout_alignBottom="@+id/player12"
+            android:layout_alignEnd="@+id/player7"
+            android:layout_marginBottom="62dp"
+            android:layout_marginEnd="16dp" />
 
         <Button
             android:id="@+id/player4"
@@ -55,62 +88,67 @@
             android:layout_height="70dp"
             android:layout_above="@+id/player2"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="30dp"
-            android:layout_marginStart="35dp" />
+            android:layout_marginBottom="26dp"
+            android:layout_marginStart="18dp" />
 
         <Button
             android:id="@+id/player5"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_alignBaseline="@+id/player4"
-            android:layout_alignBottom="@+id/player4"
+            android:layout_above="@+id/player3"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="40dp" />
+            android:layout_marginBottom="26dp"
+            android:layout_marginEnd="18dp" />
 
         <Button
             android:id="@+id/player6"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_above="@+id/player4"
-            android:layout_centerHorizontal="true" />
+            android:layout_above="@+id/player12"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="188dp" />
 
         <Button
             android:id="@+id/player8"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_alignStart="@+id/player4"
-            android:layout_centerVertical="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/player7"
+            android:layout_marginStart="40dp" />
 
         <Button
             android:id="@+id/player7"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_alignStart="@+id/player5"
-            android:layout_centerVertical="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="40dp" />
 
         <Button
             android:id="@+id/player9"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_above="@+id/player7"
+            android:layout_above="@+id/player6"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="34dp" />
+            android:layout_marginBottom="72dp" />
 
         <Button
             android:id="@+id/player11"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="104dp"
-            android:layout_toEndOf="@+id/player8" />
+            android:layout_above="@+id/player9"
+            android:layout_alignEnd="@+id/player3"
+            android:layout_marginBottom="37dp"
+            android:layout_marginEnd="21dp" />
 
         <Button
             android:id="@+id/player10"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_alignBaseline="@+id/player11"
-            android:layout_alignBottom="@+id/player11"
-            android:layout_toStartOf="@+id/player7" />
+            android:layout_above="@+id/player9"
+            android:layout_alignStart="@+id/player2"
+            android:layout_marginBottom="37dp"
+            android:layout_marginStart="21dp" />
     </RelativeLayout>
 
 </LinearLayout>

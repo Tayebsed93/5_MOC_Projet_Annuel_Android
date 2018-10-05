@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.esgi.iaitmansour.myfoot.DetailsResultatActivity;
+import com.esgi.iaitmansour.myfoot.Activitys.DetailsResultatActivity;
 import com.esgi.iaitmansour.myfoot.Models.Resultat;
 import com.esgi.iaitmansour.myfoot.R;
 

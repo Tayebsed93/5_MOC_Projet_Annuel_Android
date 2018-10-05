@@ -3,7 +3,7 @@
     package="com.esgi.iaitmansour.myfoot">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activitys.SplashActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -24,35 +24,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activitys.MainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AddClubActivity"
+            android:name=".Activitys.AddClubActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ConnectionMembreActivity"
+            android:name=".Activitys.ConnectionMembreActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SupporterActivity"
+            android:name=".Activitys.SupporterActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DetailsResultatActivity"
+            android:name=".Activitys.DetailsResultatActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MembreActualityActivity"
+            android:name=".Activitys.MembreActualityActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AddActualityActivity"
+            android:name=".Activitys.AddActualityActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PlayActivity"
+            android:name=".Activitys.PlayActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
 
@@ -80,14 +80,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TerrainActivity"
+            android:name=".Activitys.TerrainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PlayersNationalityActivity"
+            android:name=".Activitys.PlayersNationalityActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
-        <activity android:name=".RecognizeLicenceActivity"></activity>
+        <activity android:name=".Activitys.RecognizeLicenceActivity" />
+        <activity android:name=".Activitys.TerrainDeuxActivity"></activity>
     </application>
 
 </manifest>

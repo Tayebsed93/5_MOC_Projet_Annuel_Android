@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.esgi.iaitmansour.myfoot.ResultatCFragment;
-import com.esgi.iaitmansour.myfoot.ResultatRFragment;
+import com.esgi.iaitmansour.myfoot.Fragments.ResultatCFragment;
+import com.esgi.iaitmansour.myfoot.Fragments.ResultatRFragment;
 
 /**
  * Created by iaitmansour on 29/06/2018.
@@ -14,6 +14,8 @@ import com.esgi.iaitmansour.myfoot.ResultatRFragment;
 public class PagerAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;
 
+
+    ResultatRFragment tabResultat;
     public PagerAdapter(FragmentManager fm, int NumOfTabs) {
         super(fm);
         this.mNumOfTabs = NumOfTabs;
@@ -24,7 +26,8 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                ResultatRFragment tabResultat = new ResultatRFragment();
+                if(tabResultat ==null)
+                    tabResultat = new ResultatRFragment();
                 return tabResultat;
             case 1:
                 ResultatCFragment tabClassement = new ResultatCFragment();

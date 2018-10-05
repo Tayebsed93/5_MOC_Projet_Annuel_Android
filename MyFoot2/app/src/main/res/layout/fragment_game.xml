@@ -5,7 +5,7 @@
     android:layout_marginBottom="60dp"
     android:background="@drawable/terrainconnexion"
     android:orientation="vertical"
-    tools:context="com.esgi.iaitmansour.myfoot.GameFragment">
+    tools:context="com.esgi.iaitmansour.myfoot.Fragments.GameFragment">
 
     <TextView
         android:id="@+id/textView"

@@ -10,21 +10,32 @@ public class News {
     public String content;
     public String imgUrl;
     public String created;
+    public  int id;
 
     public News() {
     }
 
-    public News(String title, String content, String imgUrl) {
+    public News(String title, String content, String imgUrl, int id) {
         this.title = title;
         this.content = content;
         this.imgUrl = imgUrl;
+        this.id = id;
     }
 
-    public News(String title, String content, String imgUrl, String created) {
+    public News(String title, String content, String imgUrl, String created, int id) {
         this.title = title;
         this.content = content;
         this.imgUrl = imgUrl;
         this.created = created;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {

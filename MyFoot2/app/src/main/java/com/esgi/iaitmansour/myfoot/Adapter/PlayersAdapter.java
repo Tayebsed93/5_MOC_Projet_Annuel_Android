@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.esgi.iaitmansour.myfoot.Models.Players;
 import com.esgi.iaitmansour.myfoot.R;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 
 /**
@@ -36,6 +37,11 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayersV
         return new PlayersAdapter.PlayersViewHolder (v);
     }
 
+    public static String formatStringNormalizer(String s) {
+        String temp = Normalizer.normalize(s, Normalizer.Form.NFD);
+        return temp.replaceAll("[^\\p{ASCII}]", "").toLowerCase();
+    }
+
 
     @Override
     public void onBindViewHolder(PlayersAdapter.PlayersViewHolder holder, int position) {
@@ -46,8 +52,8 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayersV
         String flag = currentPlayer.getPays ();
 
 
-        String StringGenerated = String.valueOf(currentPlayer.getName ().toLowerCase().replaceAll("([^a-zA-Z]|\\s)+", ""));
-        int id = mContext.getResources().getIdentifier(StringGenerated, "drawable", mContext.getPackageName());
+        String StringGenerated = String.valueOf(currentPlayer.getName ().toLowerCase().replaceAll("(\\s)|'", ""));
+        int id = mContext.getResources().getIdentifier(formatStringNormalizer (StringGenerated), "drawable", mContext.getPackageName());
 
         String StringGeneratedd = String.valueOf(flag.toLowerCase().replaceAll("([^a-zA-Z]|\\s)+", ""));
         int idd = mContext.getResources().getIdentifier(StringGeneratedd, "drawable", mContext.getPackageName());
@@ -58,6 +64,7 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayersV
 
         if(id !=0){
             holder.mImgPlayers.setImageResource (id);
+
         }
         else{
 

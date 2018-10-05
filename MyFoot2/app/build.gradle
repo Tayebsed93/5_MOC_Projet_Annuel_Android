@@ -6,8 +6,8 @@ android {
         applicationId "com.esgi.iaitmansour.myfoot"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 8
-        versionName "1.7"
+        versionCode 11
+        versionName "2.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -30,7 +30,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.google.android.gms:play-services-vision:9.8.0'
+    compile 'com.google.android.gms:play-services-vision:15.0.1'
     implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.android.support:support-annotations:27.1.1'
